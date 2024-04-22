@@ -59,7 +59,7 @@ class Clustering:
             return self.get_clusters_agglomerative_clustering(self.query_vector, "ward")
 
     def get_clusters_flat_clustering(self, query_vector):
-        kmeans_model = pickle.load(open("new_kmeans_model_6.pkl", "rb"))
+        kmeans_model = pickle.load(open("new_kmeans_model_7.pkl", "rb"))
         predicted_clusters = kmeans_model.predict(query_vector)
         p_c = list(predicted_clusters.flatten())
         return self.re_rank_cluster(p_c)
